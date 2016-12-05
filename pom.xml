@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <groupId>uk.gov.cambsfire</groupId>
+        <artifactId>cfrs-parent</artifactId>
+        <version>1.0</version>
+    </parent>
+
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>cfrs-oss-parent</artifactId>
+    <version>1.0</version>
+    <packaging>pom</packaging>
+    <name>Cambsfire Open Source Project Parent POM</name>
+
+    <licenses>
+        <license>
+            <name>BSD License Version 3</name>
+            <url>https://opensource.org/licenses/BSD-3-Clause</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+    
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.codehaus.mojo</groupId>
+                    <artifactId>license-maven-plugin</artifactId>
+                    <version>1.10</version>
+                    <configuration>
+                        <verbose>false</verbose>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>first</id>
+                            <goals>
+                                <goal>update-file-header</goal>
+                                <goal>update-project-license</goal>
+                            </goals>
+                            <phase>validate</phase>
+                            <configuration>
+                                <licenseName>bsd_3</licenseName>
+                                <roots>
+                                    <root>src/main/java</root>
+                                    <root>src/test/java</root>
+                                </roots>
+                                <emptyLineAfterHeader>true</emptyLineAfterHeader>
+                            </configuration>
+                        </execution>
+                    </executions>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
+</project>
