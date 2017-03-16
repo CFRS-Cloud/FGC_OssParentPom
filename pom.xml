@@ -4,14 +4,26 @@
     <parent>
         <groupId>uk.gov.cambsfire</groupId>
         <artifactId>cfrs-parent</artifactId>
-        <version>1.0.1</version>
+        <version>1.0.2</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
     <artifactId>cfrs-oss-parent</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <packaging>pom</packaging>
     <name>Cambsfire Open Source Project Parent POM</name>
+    <distributionManagement>
+        <repository>
+            <id>cfrs-aws-release</id>
+            <name>CFRS AWS Release Repository</name>
+            <url>${cfrs-aws-release-repository-url}</url>
+        </repository>
+        <snapshotRepository>
+            <id>cfrs-aws-snapshot</id>
+            <name>CFRS AWS Snapshot Repository</name>
+            <url>${cfrs-aws-snapshot-repository-url}</url>
+        </snapshotRepository>
+    </distributionManagement>
 
     <licenses>
         <license>
