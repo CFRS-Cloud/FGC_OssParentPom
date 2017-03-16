@@ -12,18 +12,6 @@
     <version>1.0.2</version>
     <packaging>pom</packaging>
     <name>Cambsfire Open Source Project Parent POM</name>
-    <distributionManagement>
-        <repository>
-            <id>cfrs-aws-release</id>
-            <name>CFRS AWS Release Repository</name>
-            <url>${cfrs-aws-release-repository-url}</url>
-        </repository>
-        <snapshotRepository>
-            <id>cfrs-aws-snapshot</id>
-            <name>CFRS AWS Snapshot Repository</name>
-            <url>${cfrs-aws-snapshot-repository-url}</url>
-        </snapshotRepository>
-    </distributionManagement>
 
     <licenses>
         <license>
